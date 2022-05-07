@@ -1,0 +1,8 @@
+#define _CRT_SECURE_NO_WARNINGS	//解决scanf编译报错
+#include <stdio.h>
+int main()
+{ 
+  int a , b;
+  scanf("%d%d",&a,&b);    //一定要在scanf函数后面的变量名前面添加 &
+  printf("%d\n",a+b);
+}
