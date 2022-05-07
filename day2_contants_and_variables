@@ -2,7 +2,7 @@
 #include <stdio.h>
 int main()
 {
-	int a;
-	scanf("%d", &a);  //一定要在scanf函数后面的变量名前面添加 &
-	printf("a=%d\n",a);
+	int a, b;
+	scanf("%d%d", &a, &b);  //一定要在scanf函数后面的变量名前面添加 &
+	printf("%d\n", a + b);
 }
