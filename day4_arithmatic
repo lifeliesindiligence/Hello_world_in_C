@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main()
+{
+	int i = 5;
+	float j = i / 2;		//这里还是输出2.00000 是因为i就是int，int的除法会去除浮点数
+	float k = (float)i / 2;//float 是一种强制转化运算符，将int类型的变量i转化为了float类型的变量
+	printf("%f\n", j);
+	printf("%f\n", k);
+}
