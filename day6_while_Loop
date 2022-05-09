@@ -5,9 +5,9 @@ int main()
 {
 	int a;
 	scanf("%d",&a);
-	while (a != 0)
+	while (a != 0)			//当a != 0 时进入循环
 	{
-		printf("%d", a % 10); 
+		printf("%d", a % 10); 	
 		a = a / 10;
-	}
+	}				//循环体
 } 
