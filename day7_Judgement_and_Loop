@@ -1,0 +1,23 @@
+#define _CRT_SECURE_NO_WARNINGS	//解决scanf编译报错
+#include <stdio.h>
+int main()	//判断输入的数字是否为“123321”一样的对称数
+{
+	int i,j;			//可以一起声明
+	int x = 0;
+	int y = 0;
+	scanf("%d", &i);	
+	j = i;				//复制被判断数以作对比，得到复制数j
+	while (i)			//这个地方可以直接写i，等效替代 i != 0
+	{
+		y = i % 10;		//取被判断数的个位y
+		i = i / 10;		//去除被判断数的个位，得到下一个i
+		x = 10 * x + y;	//将y倒着输入到x变量的最后一位
+	}
+	if (x==j)		//判断复制数j和最终的x是否相等
+	{
+		printf("yes");
+	}
+	else {
+		printf("no");
+	}
+}
