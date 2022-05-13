@@ -1,0 +1,39 @@
+ #include <stdio.h>
+
+int main()
+{
+	int a = 1;
+	int b = 1;
+	int c = 1;
+	int d = 1;
+	int i = 0;
+
+	while (a <= 9)
+	{
+		while (b <= 18)
+		{
+			while (c <= 37)
+			{
+				while (d <= 37)
+				{
+					if (10 * a + 5 * b + 2 * c + d == 100 && a + b + c + d == 40)
+					{
+							i++;
+							printf("10元有%d张,5元有%d张,2元有%d张，1元有%d张\t\t\t\t\n", a, b, c, d);
+							d = 1;
+							break;
+					}
+					else {
+						d++;
+					}
+				}d = 1;
+				c++;
+			}c = 1;
+			b++;
+		}b = 1;
+		a++;
+	}
+	printf("一共有几种：%d\n", i); 
+}
+
+
