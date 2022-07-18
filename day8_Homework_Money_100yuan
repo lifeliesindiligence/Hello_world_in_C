@@ -1,4 +1,4 @@
- #include <stdio.h>
+#include <stdio.h>
 
 int main()
 {
@@ -18,10 +18,10 @@ int main()
 				{
 					if (10 * a + 5 * b + 2 * c + d == 100 && a + b + c + d == 40)
 					{
-							i++;
-							printf("10元有%d张,5元有%d张,2元有%d张，1元有%d张\t\t\t\t\n", a, b, c, d);
-							d = 1;
-							break;
+						i++;
+						printf("%d ten yuan bills ,%d five yuan bills ,%d two yuan bills ,%d one yuan bills \n", a, b, c, d);
+						d = 1;
+						break;
 					}
 					else {
 						d++;
@@ -33,7 +33,5 @@ int main()
 		}b = 1;
 		a++;
 	}
-	printf("一共有几种：%d\n", i); 
+	printf("how many kinds of combinations: %d\n", i);
 }
-
-
