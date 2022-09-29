@@ -41,6 +41,37 @@ int* rear;
 
 int two_dimensional_array[MaxSize][MaxSize];		//two_dimensional_array
 
+
+
+typedef char VerTexType;							//假设顶点的数据类型为字符型
+typedef int ArcType;								//假设边的权值类型为整型
+typedef struct
+{
+	VerTexType vexs[MVNum];							//顶点一维字符（顶点的实际含义，所以用字符）
+	ArcType arcs[MVNum][MVNum];						//邻接矩阵二维数组
+	int vexnum, arcnum;	//图的当前顶点数和边数
+}AMGraph;
+
+//双亲孩子拉链表法表示M叉树
+
+typedef struct CTNode					//定义指向孩子链表的 指针结构体CTNode
+{
+	int child;
+	struct CTNode* nextchild;
+}*ChildTree;
+
+typedef struct{							//定义 包含一个双亲下标和一个孩子指针的 每一个结点
+	ElemType data;
+	int parent;							//保存双亲下标
+	ChildTree firstchild;				//孩子链的头指针指向CTNode
+}CTNode;
+
+typedef struct{							//双亲孩子拉链表表示的树
+	CTNode CPTree[MaxSize];				//每一个结点构成的一维数组
+	int n, r;							//结点数和根结点的下标
+}CPTree;
+
+
 void main(){
 
 }
