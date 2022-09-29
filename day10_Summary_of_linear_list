@@ -1,0 +1,46 @@
+#include <stdio.h>
+#define MaxSize = 10;
+
+
+struct struct_name {				// 结构体
+	int num;
+	char name[20];
+	char sex;
+};
+
+struct node_of_singly_linked_list {
+	int weight;
+	int* next;
+};
+
+struct node_of_doubly_linked_list {
+	int weight;
+	int* prior;
+	int* next;
+};
+
+int array[MaxSize];		//sequence_stack
+int top = 0;			//0 <=top  <= Maxsize -1
+
+struct node_of_linked_stack {
+	int weight;
+	int* next;
+};
+
+int sequence_queue[MaxSize];		//sequence_queue
+int front = 0 ; 
+int rear = 0;
+
+struct node_of_linked_queue {
+	int weight;
+	int* next;
+};
+
+int* front;							//linked queue
+int* rear;
+
+int two_dimensional_array[MaxSize][MaxSize];		//two_dimensional_array
+
+void main(){
+
+}
