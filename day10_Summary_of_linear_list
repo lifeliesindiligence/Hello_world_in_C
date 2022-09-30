@@ -71,6 +71,25 @@ typedef struct{							//双亲孩子拉链表表示的树
 	int n, r;							//结点数和根结点的下标
 }CPTree;
 
+//快排（优化）
+void Qsort(A[], L, R) {							//A数组保存数据，L指向左边界，R指向右边界
+	if (L >= R) return;							//当前LR所框区间元素个数<=1则退出
+	int temp, i = 1, j = R;						//i和j是两个数组的下标移动
+	把A数组中随机一个元素和A[1]交换				//***快排优化***
+		key = A[L];								//key作为参照值参与比较
+	while (i < j) {								
+		while (i < j && A[j] > key ) 
+			j--;
+		while (i < j && A[i] <= key)
+			i++;
+		if (i < j)
+			swap(A[i], A[j]);					//交换i和j
+		}
+	A[i] = key;
+	Qsort(L, i - 1, A[0]);						//递归处理左区间
+	Qsort(i + 1, R, A[0]);						//递归处理右区间
+}
+
 
 void main(){
 
